@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>山坡杨的博客</title>
+  <subtitle>青山依旧在，几度夕阳红</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yangxuefeng.com/"/>
+  <updated>2016-06-30T08:16:38.411Z</updated>
+  <id>http://yangxuefeng.com/</id>
+  
+  <author>
+    <name>山坡杨</name>
+    <email>xuefeng.yang@foxmail.com</email>
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>临江仙两首</title>
+    <link href="http://yangxuefeng.com/2016/06/30/%E4%B8%B4%E6%B1%9F%E4%BB%99/"/>
+    <id>http://yangxuefeng.com/2016/06/30/临江仙/</id>
+    <published>2016-06-30T08:08:49.000Z</published>
+    <updated>2016-06-30T08:16:38.411Z</updated>
+    
+    <content type="html">&lt;h2 id=&quot;临江仙·滚滚长江东逝水&quot;&gt;&lt;a href=&quot;#临江仙·滚滚长江东逝水&quot; class=&quot;headerlink&quot; title=&quot;临江仙·滚滚长江东逝水&quot;&gt;&lt;/a&gt;临江仙·滚滚长江东逝水&lt;/h2&gt;&lt;h4 id=&quot;杨慎&quot;&gt;&lt;a href=&quot;#杨慎&quot; class=&quot;headerlink&quot; title=&quot;杨慎&quot;&gt;&lt;/a&gt;杨慎&lt;/h4&gt;&lt;p&gt;滚滚长江东逝水，浪花淘尽英雄。    &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;br&gt;是非成败转头空。&lt;br&gt;青山依旧在，几度夕阳红。&lt;br&gt;白发渔樵江渚上，惯看秋月春风。&lt;br&gt;一壶浊酒喜相逢。&lt;br&gt;古今多少事，都付笑谈中。&lt;/p&gt;
+&lt;h2 id=&quot;临江仙·夜归临皋&quot;&gt;&lt;a href=&quot;#临江仙·夜归临皋&quot; class=&quot;headerlink&quot; title=&quot;临江仙·夜归临皋&quot;&gt;&lt;/a&gt;临江仙·夜归临皋&lt;/h2&gt;&lt;h4 id=&quot;苏轼&quot;&gt;&lt;a href=&quot;#苏轼&quot; class=&quot;headerlink&quot; title=&quot;苏轼&quot;&gt;&lt;/a&gt;苏轼&lt;/h4&gt;&lt;p&gt;夜饮东坡醒复，归来仿佛三更。&lt;br&gt;家童鼻息已雷鸣。&lt;br&gt;敲门都不应，倚杖听江声。&lt;br&gt;长恨此身非我有，何时忘却营营？&lt;br&gt;夜阑风静縠纹平。&lt;br&gt;小舟从此逝，江海寄馀生。&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;临江仙·滚滚长江东逝水&quot;&gt;&lt;a href=&quot;#临江仙·滚滚长江东逝水&quot; class=&quot;headerlink&quot; title=&quot;临江仙·滚滚长江东逝水&quot;&gt;&lt;/a&gt;临江仙·滚滚长江东逝水&lt;/h2&gt;&lt;h4 id=&quot;杨慎&quot;&gt;&lt;a href=&quot;#杨慎&quot; class=&quot;headerlink&quot; title=&quot;杨慎&quot;&gt;&lt;/a&gt;杨慎&lt;/h4&gt;&lt;p&gt;滚滚长江东逝水，浪花淘尽英雄。
+    
+    </summary>
+    
+      <category term="杂谈" scheme="http://yangxuefeng.com/categories/%E6%9D%82%E8%B0%88/"/>
+    
+    
+      <category term="杂谈" scheme="http://yangxuefeng.com/tags/%E6%9D%82%E8%B0%88/"/>
+    
+  </entry>
+  
+</feed>

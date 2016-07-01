@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yangxuefeng.com/"/>
-  <updated>2016-06-30T08:16:38.411Z</updated>
+  <updated>2016-07-01T02:37:26.051Z</updated>
   <id>http://yangxuefeng.com/</id>
   
   <author>
@@ -16,19 +16,52 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>临江仙两首</title>
-    <link href="http://yangxuefeng.com/2016/06/30/%E4%B8%B4%E6%B1%9F%E4%BB%99/"/>
-    <id>http://yangxuefeng.com/2016/06/30/临江仙/</id>
-    <published>2016-06-30T08:08:49.000Z</published>
-    <updated>2016-06-30T08:16:38.411Z</updated>
+    <title>常用浏览器调试功能详解</title>
+    <link href="http://yangxuefeng.com/2016/06/30/Web%E5%BC%80%E5%8F%91%E4%B9%8B%E6%B5%8F%E8%A7%88%E5%99%A8%E8%B0%83%E8%AF%95/"/>
+    <id>http://yangxuefeng.com/2016/06/30/Web开发之浏览器调试/</id>
+    <published>2016-06-30T08:52:44.000Z</published>
+    <updated>2016-07-01T02:37:26.051Z</updated>
     
-    <content type="html">&lt;h2 id=&quot;临江仙·滚滚长江东逝水&quot;&gt;&lt;a href=&quot;#临江仙·滚滚长江东逝水&quot; class=&quot;headerlink&quot; title=&quot;临江仙·滚滚长江东逝水&quot;&gt;&lt;/a&gt;临江仙·滚滚长江东逝水&lt;/h2&gt;&lt;h4 id=&quot;杨慎&quot;&gt;&lt;a href=&quot;#杨慎&quot; class=&quot;headerlink&quot; title=&quot;杨慎&quot;&gt;&lt;/a&gt;杨慎&lt;/h4&gt;&lt;p&gt;滚滚长江东逝水，浪花淘尽英雄。    &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;br&gt;是非成败转头空。&lt;br&gt;青山依旧在，几度夕阳红。&lt;br&gt;白发渔樵江渚上，惯看秋月春风。&lt;br&gt;一壶浊酒喜相逢。&lt;br&gt;古今多少事，都付笑谈中。&lt;/p&gt;
-&lt;h2 id=&quot;临江仙·夜归临皋&quot;&gt;&lt;a href=&quot;#临江仙·夜归临皋&quot; class=&quot;headerlink&quot; title=&quot;临江仙·夜归临皋&quot;&gt;&lt;/a&gt;临江仙·夜归临皋&lt;/h2&gt;&lt;h4 id=&quot;苏轼&quot;&gt;&lt;a href=&quot;#苏轼&quot; class=&quot;headerlink&quot; title=&quot;苏轼&quot;&gt;&lt;/a&gt;苏轼&lt;/h4&gt;&lt;p&gt;夜饮东坡醒复，归来仿佛三更。&lt;br&gt;家童鼻息已雷鸣。&lt;br&gt;敲门都不应，倚杖听江声。&lt;br&gt;长恨此身非我有，何时忘却营营？&lt;br&gt;夜阑风静縠纹平。&lt;br&gt;小舟从此逝，江海寄馀生。&lt;/p&gt;
+    <content type="html">&lt;p&gt;调试是开发过程中非常重要的组成部分，开发中遇到的大部分问题，都能通过调试程序解决，所以掌握调试方法是很重要的。&lt;br&gt;每种编程语言的调试方法都不相同，本文主要介绍使用谷歌浏览器调试JavaScript程序的基本操作。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;开发者工具&quot;&gt;&lt;a href=&quot;#开发者工具&quot; class=&quot;headerlink&quot; title=&quot;开发者工具&quot;&gt;&lt;/a&gt;开发者工具&lt;/h3&gt;&lt;p&gt;召唤键：Ctrl+Shift+I（windows下F12也可以）&lt;br&gt;下面介绍此工具的几个常用功能&lt;br&gt;&lt;img src=&quot;/2016/06/30/Web开发之浏览器调试/img1.png&quot; alt=&quot;开发者工具&quot; title=&quot;开发者工具&quot;&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;选取页面元素，选取到的元素会在Elements栏显示其html结构和css样式&lt;/li&gt;
+&lt;li&gt;Elements栏，左侧显示html结构，值得注意的是，这里显示的并不是页面的源代码，而是html代码，如果使用了Ext Js、jQueryUi之类的话，这里显示的就是解析之后的html代码。&lt;br&gt;右侧主要用来查看选中元素的css样式以及次样式所在目录。&lt;/li&gt;
+&lt;li&gt;Console栏，这一功能很重要，针对JavaScript的许多调试，都发生在这里。&lt;br&gt;js抛出的异常警告之类，都会显示在这里。&lt;br&gt;配合chrome提供的console对象，可以在JavaScript代码里这样写：&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(&lt;span class=&quot;built_in&quot;&gt;window&lt;/span&gt;)	&lt;span class=&quot;comment&quot;&gt;//会在Console栏打印出window对象&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.time(&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;)&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//这里插入代码&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.endTime(&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;)	&lt;span class=&quot;comment&quot;&gt;//可以打印出这段代码的运行时间,参数是计时器的名称&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;li&gt;Network,这一栏可以查看网页的HTTP通信情况，查看当前请求页面的网络流量等，当然，前提是你在请求网页之前Ctrl+Shift+I。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&quot;debugger&quot;&gt;&lt;a href=&quot;#debugger&quot; class=&quot;headerlink&quot; title=&quot;debugger&quot;&gt;&lt;/a&gt;debugger&lt;/h3&gt;&lt;p&gt;debugger是一个很好用的功能，特别是配合chrome的console。&lt;br&gt;&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; obj = &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	name: &lt;span class=&quot;string&quot;&gt;&quot;chairman&quot;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;debugger&lt;/span&gt;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// more...&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;br&gt;访问此页面时，程序会停在debugger处，这时可以在Console中做如下操作。&lt;br&gt;&lt;img src=&quot;/2016/06/30/Web开发之浏览器调试/img2.png&quot; alt=&quot;开发者工具&quot; title=&quot;开发者工具&quot;&gt;&lt;/p&gt;
 </content>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;临江仙·滚滚长江东逝水&quot;&gt;&lt;a href=&quot;#临江仙·滚滚长江东逝水&quot; class=&quot;headerlink&quot; title=&quot;临江仙·滚滚长江东逝水&quot;&gt;&lt;/a&gt;临江仙·滚滚长江东逝水&lt;/h2&gt;&lt;h4 id=&quot;杨慎&quot;&gt;&lt;a href=&quot;#杨慎&quot; class=&quot;headerlink&quot; title=&quot;杨慎&quot;&gt;&lt;/a&gt;杨慎&lt;/h4&gt;&lt;p&gt;滚滚长江东逝水，浪花淘尽英雄。
+      &lt;p&gt;调试是开发过程中非常重要的组成部分，开发中遇到的大部分问题，都能通过调试程序解决，所以掌握调试方法是很重要的。&lt;br&gt;每种编程语言的调试方法都不相同，本文主要介绍使用谷歌浏览器调试JavaScript程序的基本操作。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="html" scheme="http://yangxuefeng.com/categories/html/"/>
+    
+    
+      <category term="debugger" scheme="http://yangxuefeng.com/tags/debugger/"/>
+    
+      <category term="javascript" scheme="http://yangxuefeng.com/tags/javascript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>临江仙两首</title>
+    <link href="http://yangxuefeng.com/2016/06/30/%E4%B8%B4%E6%B1%9F%E4%BB%99/"/>
+    <id>http://yangxuefeng.com/2016/06/30/临江仙/</id>
+    <published>2016-06-30T08:08:49.000Z</published>
+    <updated>2016-06-30T09:55:10.862Z</updated>
+    
+    <content type="html">&lt;h2 id=&quot;临江仙·滚滚长江东逝水&quot;&gt;&lt;a href=&quot;#临江仙·滚滚长江东逝水&quot; class=&quot;headerlink&quot; title=&quot;临江仙·滚滚长江东逝水&quot;&gt;&lt;/a&gt;临江仙·滚滚长江东逝水&lt;/h2&gt;&lt;h3 id=&quot;杨慎&quot;&gt;&lt;a href=&quot;#杨慎&quot; class=&quot;headerlink&quot; title=&quot;杨慎&quot;&gt;&lt;/a&gt;杨慎&lt;/h3&gt;&lt;p&gt;滚滚长江东逝水，浪花淘尽英雄。    &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;br&gt;是非成败转头空。&lt;br&gt;青山依旧在，几度夕阳红。&lt;br&gt;白发渔樵江渚上，惯看秋月春风。&lt;br&gt;一壶浊酒喜相逢。&lt;br&gt;古今多少事，都付笑谈中。&lt;/p&gt;
+&lt;h2 id=&quot;临江仙·夜归临皋&quot;&gt;&lt;a href=&quot;#临江仙·夜归临皋&quot; class=&quot;headerlink&quot; title=&quot;临江仙·夜归临皋&quot;&gt;&lt;/a&gt;临江仙·夜归临皋&lt;/h2&gt;&lt;h3 id=&quot;苏轼&quot;&gt;&lt;a href=&quot;#苏轼&quot; class=&quot;headerlink&quot; title=&quot;苏轼&quot;&gt;&lt;/a&gt;苏轼&lt;/h3&gt;&lt;p&gt;夜饮东坡醒复，归来仿佛三更。&lt;br&gt;家童鼻息已雷鸣。&lt;br&gt;敲门都不应，倚杖听江声。&lt;br&gt;长恨此身非我有，何时忘却营营？&lt;br&gt;夜阑风静縠纹平。&lt;br&gt;小舟从此逝，江海寄馀生。&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;临江仙·滚滚长江东逝水&quot;&gt;&lt;a href=&quot;#临江仙·滚滚长江东逝水&quot; class=&quot;headerlink&quot; title=&quot;临江仙·滚滚长江东逝水&quot;&gt;&lt;/a&gt;临江仙·滚滚长江东逝水&lt;/h2&gt;&lt;h3 id=&quot;杨慎&quot;&gt;&lt;a href=&quot;#杨慎&quot; class=&quot;headerlink&quot; title=&quot;杨慎&quot;&gt;&lt;/a&gt;杨慎&lt;/h3&gt;&lt;p&gt;滚滚长江东逝水，浪花淘尽英雄。
     
     </summary>
     

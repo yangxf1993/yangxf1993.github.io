@@ -3,30 +3,27 @@
 <head>
   <meta charset="utf-8">
   
-  <title>常用浏览器调试功能详解 | 山坡杨的博客 | 青山依旧在，几度夕阳红</title>
+  <title>JavaScript函数改变作用域的方法call、apply、bind详解 | 山坡杨的博客 | 青山依旧在，几度夕阳红</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   <meta name="theme-color" content="#3F51B5">
   
   
-  <meta name="keywords" content="debugger,javascript">
-  <meta name="description" content="调试是开发过程中非常重要的组成部分，开发中遇到的大部分问题，都能通过调试程序解决，所以掌握调试方法是很重要的。每种编程语言的调试方法都不相同，本文主要介绍使用谷歌浏览器调试JavaScript程序的基本操作。">
+  <meta name="keywords" content="javascript">
+  <meta name="description" content="JavaScript的函数都有两个方法：call()和apply()这两个方法的作用类似，都是在特定的作用域中调用函数。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="常用浏览器调试功能详解">
-<meta property="og:url" content="http://yangxuefeng.com/2016/06/30/Web开发之浏览器调试/index.html">
+<meta property="og:title" content="JavaScript函数改变作用域的方法call、apply、bind详解">
+<meta property="og:url" content="http://yangxuefeng.com/2016/07/11/JavaScript函数改变作用域的方法call、apply、bind详解/index.html">
 <meta property="og:site_name" content="山坡杨的博客">
-<meta property="og:description" content="调试是开发过程中非常重要的组成部分，开发中遇到的大部分问题，都能通过调试程序解决，所以掌握调试方法是很重要的。每种编程语言的调试方法都不相同，本文主要介绍使用谷歌浏览器调试JavaScript程序的基本操作。">
-<meta property="og:image" content="http://yangxuefeng.com/2016/06/30/Web开发之浏览器调试/img1.png">
-<meta property="og:image" content="http://yangxuefeng.com/2016/06/30/Web开发之浏览器调试/img2.png">
-<meta property="og:updated_time" content="2016-07-06T02:30:33.604Z">
+<meta property="og:description" content="JavaScript的函数都有两个方法：call()和apply()这两个方法的作用类似，都是在特定的作用域中调用函数。">
+<meta property="og:updated_time" content="2016-07-11T09:09:10.656Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="常用浏览器调试功能详解">
-<meta name="twitter:description" content="调试是开发过程中非常重要的组成部分，开发中遇到的大部分问题，都能通过调试程序解决，所以掌握调试方法是很重要的。每种编程语言的调试方法都不相同，本文主要介绍使用谷歌浏览器调试JavaScript程序的基本操作。">
-<meta name="twitter:image" content="http://yangxuefeng.com/2016/06/30/Web开发之浏览器调试/img1.png">
+<meta name="twitter:title" content="JavaScript函数改变作用域的方法call、apply、bind详解">
+<meta name="twitter:description" content="JavaScript的函数都有两个方法：call()和apply()这两个方法的作用类似，都是在特定的作用域中调用函数。">
   
     <link rel="alternative" href="/atom.xml" title="山坡杨的博客" type="application/atom+xml">
   
-  <meta name="summary" content="&lt;p&gt;调试是开发过程中非常重要的组成部分，开发中遇到的大部分问题，都能通过调试程序解决，所以掌握调试方法是很重要的。&lt;br&gt;每种编程语言的调试方法都不相同，本文主要介绍使用谷歌浏览器调试JavaScript程序的基本操作。&lt;br&gt;">
+  <meta name="summary" content="&lt;h4 id=&quot;JavaScript的函数都有两个方法：call-和apply&quot;&gt;&lt;a href=&quot;#JavaScript的函数都有两个方法：call-和apply&quot; class=&quot;headerlink&quot; title=&quot;JavaScript的函数都有两个方法：call()和apply()&quot;&gt;&lt;/a&gt;JavaScript的函数都有两个方法：call()和apply()&lt;/h4&gt;&lt;p&gt;这两个方法的作用类似，都是在特定的作用域中调用函数。">
   <link rel="shortcut icon" href="../../../../img/myfavicon.ico">
   <link rel="stylesheet" href="../../../../css/style.css">
 </head>
@@ -97,7 +94,7 @@
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">常用浏览器调试功能详解</div>
+        <div class="flex-col header-title ellipsis">JavaScript函数改变作用域的方法call、apply、bind详解</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -118,15 +115,15 @@
 </header>
 <header class="content-header">
   <div class="container">
-    <h1 class="author">常用浏览器调试功能详解</h1>
+    <h1 class="author">JavaScript函数改变作用域的方法call、apply、bind详解</h1>
     <h5 class="subtitle">
           
-            <time datetime="2016-06-30T08:52:44.000Z" itemprop="datePublished" class="page-time">
-  2016-06-30
+            <time datetime="2016-07-11T08:18:08.000Z" itemprop="datePublished" class="page-time">
+  2016-07-11
 </time>
 
 
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="../../../../categories/html/">html</a></li></ul>
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="../../../../categories/javascript/">javascript</a></li></ul>
  
         
     </h5>
@@ -134,11 +131,11 @@
 </header>
 
     <div class="container body-wrap">
-      <article id="post-Web开发之浏览器调试" 
+      <article id="post-JavaScript函数改变作用域的方法call、apply、bind详解" 
   class="article article-type-post" itemprop="blogPost">
     <div class="post-meat flex-row">
         
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../../../tags/debugger/">debugger</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../../../tags/javascript/">javascript</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../../../tags/javascript/">javascript</a></li></ul>
 
     </div>
     <div class="post-body">
@@ -185,7 +182,7 @@
 
             
             <nav class="post-toc-wrap" id="post-toc">
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#开发者工具"><span class="post-toc-text">开发者工具</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#debugger"><span class="post-toc-text">debugger</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#JavaScript的函数都有两个方法：call-和apply"><span class="post-toc-text">JavaScript的函数都有两个方法：call()和apply()</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#ECMAScript5还定义了一个bind方法"><span class="post-toc-text">ECMAScript5还定义了一个bind方法</span></a></li></ol>
             </nav>
             
         </aside>
@@ -193,20 +190,13 @@
         <div class="post-main">
 
             <div class="post-content" id="post-content" itemprop="postContent">
-            <p>调试是开发过程中非常重要的组成部分，开发中遇到的大部分问题，都能通过调试程序解决，所以掌握调试方法是很重要的。<br>每种编程语言的调试方法都不相同，本文主要介绍使用谷歌浏览器调试JavaScript程序的基本操作。<br><a id="more"></a></p>
-<h3 id="开发者工具"><a href="#开发者工具" class="headerlink" title="开发者工具"></a>开发者工具</h3><p>召唤键：Ctrl+Shift+I（windows下F12也可以）<br>下面介绍此工具的几个常用功能<br><img src="/2016/06/30/Web开发之浏览器调试/img1.png" alt="开发者工具" title="开发者工具"></p>
-<ol>
-<li>选取页面元素，选取到的元素会在Elements栏显示其html结构和css样式</li>
-<li>Elements栏，左侧显示html结构，值得注意的是，这里显示的并不是页面的源代码，而是html代码，如果使用了Ext Js、jQueryUi之类的话，这里显示的就是解析之后的html代码。<br>右侧主要用来查看选中元素的css样式以及次样式所在目录。</li>
-<li>Console栏，这一功能很重要，针对JavaScript的许多调试，都发生在这里。<br>js抛出的异常警告之类，都会显示在这里。<br>配合chrome提供的console对象，可以在JavaScript代码里这样写：<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.log(<span class="built_in">window</span>)	<span class="comment">//会在Console栏打印出window对象</span></div><div class="line"></div><div class="line"><span class="built_in">console</span>.time(<span class="number">1</span>)</div><div class="line"><span class="comment">//这里插入代码</span></div><div class="line"><span class="built_in">console</span>.timeEnd(<span class="number">1</span>)	<span class="comment">//可以打印出这段代码的运行时间,参数是计时器的名称</span></div></pre></td></tr></table></figure></li>
-<li>Network,这一栏可以查看网页的HTTP通信情况，查看当前请求页面的网络流量等，当然，前提是你在请求网页之前Ctrl+Shift+I。</li>
-</ol>
-<h3 id="debugger"><a href="#debugger" class="headerlink" title="debugger"></a>debugger</h3><p>debugger是一个很好用的功能，特别是配合chrome的console。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> obj = &#123;</div><div class="line">	name: <span class="string">"chairman"</span></div><div class="line">&#125;;</div><div class="line"><span class="keyword">debugger</span>;</div><div class="line"><span class="comment">// more...</span></div></pre></td></tr></table></figure><br>访问此页面时，程序会停在debugger处，这时可以在Console中做如下操作。<br><img src="/2016/06/30/Web开发之浏览器调试/img2.png" alt="开发者工具" title="开发者工具"></p>
+            <h4 id="JavaScript的函数都有两个方法：call-和apply"><a href="#JavaScript的函数都有两个方法：call-和apply" class="headerlink" title="JavaScript的函数都有两个方法：call()和apply()"></a>JavaScript的函数都有两个方法：call()和apply()</h4><p>这两个方法的作用类似，都是在特定的作用域中调用函数。<a id="more"></a><br>这两个方法的第一个参数都是在其中运行函数的作用域，相当于将这个参数赋值给函数内的this对象。<br>区别在于后面的参数。<br>apply的第二个参数是一个参数数组，即<strong>apply(scope, args[])</strong>，<br>而call则需要把参数一一列举出来，即<strong>call(scope, arg1, arg2,…,argn)</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> user = &#123;</div><div class="line">	username: <span class="string">"admin"</span>,</div><div class="line">	password: <span class="string">"123456"</span></div><div class="line">&#125;;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">register</span>(<span class="params">username, password</span>) </span>&#123;</div><div class="line">	<span class="keyword">this</span>.username = username;</div><div class="line">	<span class="keyword">this</span>.password = password;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">find</span>(<span class="params"></span>) </span>&#123;</div><div class="line">	<span class="built_in">console</span>.log(<span class="keyword">this</span>.username + <span class="string">" : "</span> + <span class="keyword">this</span>.password);</div><div class="line">&#125;</div><div class="line">register(<span class="string">"zhangsan"</span>, <span class="string">"111111"</span>);	<span class="comment">// 或者register.call(window, "zhangsan", "111111")或register.call(this, "zhangsan", "111111")</span></div><div class="line">find();				<span class="comment">// 输出 zhangsan : 111111</span></div><div class="line">find.call(user);	<span class="comment">// 输出 admin : 123456</span></div><div class="line">register.call(user, <span class="string">"lisi"</span>, <span class="string">"999999"</span>);	<span class="comment">// 或者register.apply(user, ["lisi", "999999"])</span></div><div class="line">find.call(user);	<span class="comment">// 输出 lisi : 999999</span></div></pre></td></tr></table></figure><br><strong>这种做法的优点是，对象与函数之间没有耦合关系。</strong></p>
+<h4 id="ECMAScript5还定义了一个bind方法"><a href="#ECMAScript5还定义了一个bind方法" class="headerlink" title="ECMAScript5还定义了一个bind方法"></a>ECMAScript5还定义了一个bind方法</h4><p>这个方法会创建一个函数的实例，其 this 值会被绑定到传给 bind()函数的值<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">window</span>.username = <span class="string">"window"</span>;</div><div class="line"><span class="keyword">var</span> user = &#123;</div><div class="line">	username: <span class="string">"admin"</span></div><div class="line">&#125;;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getName</span>(<span class="params"></span>)</span>&#123;</div><div class="line"> <span class="built_in">console</span>.log(<span class="keyword">this</span>.username);</div><div class="line">&#125;</div><div class="line">getName();	<span class="comment">// window</span></div><div class="line"><span class="keyword">var</span> getUsername = getName.bind(user);</div><div class="line">getUsername(); <span class="comment">// admin </span></div></pre></td></tr></table></figure></p>
 
             <blockquote>
                 <p>
                 本文地址：
-                <a href="http://yangxuefeng.com/2016/06/30/Web开发之浏览器调试/" target="_blank" rel="external">http://yangxuefeng.com/2016/06/30/Web开发之浏览器调试/</a>
+                <a href="http://yangxuefeng.com/2016/07/11/JavaScript函数改变作用域的方法call、apply、bind详解/" target="_blank" rel="external">http://yangxuefeng.com/2016/07/11/JavaScript函数改变作用域的方法call、apply、bind详解/</a>
                 </p>
                 <footer><cite><a href="http://yangxuefeng.com">@山坡杨的博客</a></cite></footer>
             </blockquote>
@@ -214,19 +204,12 @@
             
 <nav class="post-nav">
   
-    <div class="waves-block waves-effect prev fl">
-      <a href="../../../07/11/JavaScript函数改变作用域的方法call、apply、bind详解/" id="post-prev" class="post-nav-link">
-        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">JavaScript函数改变作用域的方法call、apply、bind详解</h4>
-      </a>
-    </div>
-  
 
   
     <div class="waves-block waves-effect next fr">
-      <a href="../临江仙/" id="post-next" class="post-nav-link">
+      <a href="../../../06/30/Web开发之浏览器调试/" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">临江仙两首</h4>
+        <h4 class="title">常用浏览器调试功能详解</h4>
       </a>
     </div>
   
@@ -237,7 +220,7 @@
             
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="Web开发之浏览器调试" data-title="常用浏览器调试功能详解" data-url="http://yangxuefeng.com/2016/06/30/Web开发之浏览器调试/index.html"></div>
+	<div class="ds-thread" data-thread-key="JavaScript函数改变作用域的方法call、apply、bind详解" data-title="JavaScript函数改变作用域的方法call、apply、bind详解" data-url="http://yangxuefeng.com/2016/07/11/JavaScript函数改变作用域的方法call、apply、bind详解/index.html"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
@@ -268,10 +251,10 @@
 
 <script>
 var BLOG_SHARE = {
-    title: "常用浏览器调试功能详解",
+    title: "JavaScript函数改变作用域的方法call、apply、bind详解",
     pic: "/img/logo.jpg",
     summary: document.getElementsByName('summary')[0].content,
-    url: "http://yangxuefeng.com/2016/06/30/Web开发之浏览器调试/index.html"
+    url: "http://yangxuefeng.com/2016/07/11/JavaScript函数改变作用域的方法call、apply、bind详解/index.html"
 };
 </script>
 <div class="global-share" id="global-share">
